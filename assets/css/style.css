@@ -5,13 +5,13 @@
 
 /* Duas formas de fazer, de acordo com a herança ou selecionando a tag - mas tem que observar como esta estruturado o HTML*/
 p {
-    color: darkblue;
+    /* color: darkblue; */
 }
 
 body div section p {
     /* toda section que esta dentro da div que esta dentro do body (esta selecionando somente a section) - so é selecionado o ultimo elemento */
     /* para selecionar mais de um elemento tem que usar a virgula ex: body, div, section, p */
-    color: darkblue;
+    /* color: darkblue; */
 }
 
 
@@ -19,7 +19,7 @@ body div section p {
 
 /* EXE2 */
 .heading {
-    color: blueviolet;
+    /* color: blueviolet; */
 }
 
 /* div.main-content h2.heading  a main content que tem um descendente que é o h2 com a classe heading */
@@ -31,7 +31,7 @@ h4 {
 }
 
 .pai {
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 /* div {
@@ -40,3 +40,71 @@ h4 {
    div {
     color: initial para tirar essa configuração herdar 
 */
+
+/* child selector - seletor de descendentes*/
+/* .pai > .filha a classe pai esta diretamente ligada a classe filha - ou seja a classe filha esta dentro da classe pai */
+
+/* EXE3 */
+.pai h1+p {
+    /* selector de irmãos - seleciona todo elemento que tiver depois diretamente do elemento pai */
+    color: brown;
+}
+
+.pai p+h1 {
+    color: yellow;
+}
+
+/* EXE4 */
+.pai h1~p {
+    /*  seleciona todos depois da tag escolhida */
+    color: aqua;
+}
+
+.pai .um~.dois {
+    /*  seleciona todos depois da tag escolhida */
+    color: aqua;
+}
+
+
+/* selecionar atributos */
+[meu-atributo=valor] {
+    /* ou selecionar apenas o nome do atributo */
+    color: red;
+}
+
+[checked] {
+    width: 50px;
+    height: 50px;
+}
+
+/* para selecionar o quecomeça é com ^ e para selecionar com o que termina é com $*, pois um atributo pode ter varios valores */
+
+
+/* EXE5 */
+/* para fazer alguma transição */
+.heading {
+    transition: all 300ms ease-in-out;
+    /* all para selecionar todos - depois vc digita quanto tempo deseja - e por ultimo como quer que a transição ocorra */
+}
+
+.heading:hover {
+    background-color: rgb(13, 146, 102);
+}
+ /* pseudo classes de links */
+
+ a:link {
+    color: aquamarine;
+ }
+ a:hover {
+    color: yellowgreen;
+ }
+ a:visited {
+    color: blueviolet;
+ }
+ a:active {
+    background-color: blue;
+ }
+
+ /* focus */
+
+ 
