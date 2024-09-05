@@ -72,15 +72,15 @@ h4 {
     color: red;
 }
 
-[checked] {
+/* [checked] {
     width: 50px;
     height: 50px;
-}
+} */
 
 /* para selecionar o quecomeça é com ^ e para selecionar com o que termina é com $*, pois um atributo pode ter varios valores */
 
 
-/* EXE5 */
+/* EXE 5 */
 /* para fazer alguma transição */
 .heading {
     transition: all 300ms ease-in-out;
@@ -90,20 +90,84 @@ h4 {
 .heading:hover {
     background-color: rgb(13, 146, 102);
 }
- /* pseudo classes de links */
 
- a:link {
+/* pseudo classes de links */
+
+a:link {
     color: aquamarine;
- }
- a:hover {
+}
+
+a:hover {
     color: yellowgreen;
- }
- a:visited {
+}
+
+a:visited {
     color: blueviolet;
- }
- a:active {
+}
+
+a:active {
     background-color: blue;
- }
+}
 
- /* focus */
+/* input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
 
+input:disabled {
+    background-color: red;
+} */
+
+/* input:checked { */
+/* mudar o estado do ckeckbox quando ele estiver selecionado */
+/* width: 50px;
+    height: 50px;
+}
+
+input:checked+p {
+    /* muda a cor do p quando o input estiver marcado estiver marcado 
+    color: aqua;
+}
+
+input:not(:checked) + p { Quando o checkbox não estiver selecionado ele ficará vermelho 
+color: red;
+}
+
+/* child */
+/* firts child - o primeiro filho 
+last child - o ultimo filho */
+
+/* .pai .lista li:last-child {
+    background-color: aqua;
+} */
+/* 
+Se eu quiser uma configuração especifica em um input do tipo required (ou outro), posso fazer da seguinte forma 
+input:required {
+ e colocar a consfiguração desejada 
+}
+*/
+
+p:not(.meio) {
+    /* exclui a classe selecionada */
+    color: aqua;
+}
+
+
+ul li:nth-child(even) {
+    /* even para selecionar todos os pares - odd para selecionar os impares*/
+    background-color: aqua;
+}
+
+ul li:nth-child(odd) {
+    /* even para selecionar todos os pares - odd para selecionar os impares*/
+    background-color: rgb(104, 128, 128);
+}
+
+ul li:nth-child(3n) { /* de 3 em 3 muda para outra cor */
+background-color: aquamarine;
+}
+
+ul li:nth-child(3n + 5) { /* começando do 5 elemento eu vou mudar a cor de 3 em 3 */
+    background-color: rgb(111, 209, 127);
+}
