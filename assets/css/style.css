@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Duas formas de fazer, de acordo com a herança ou selecionando a tag - mas tem que observar como esta estruturado o HTML*/
+p {
+    color: darkblue;
+}
+
+body div section p {
+    /* toda section que esta dentro da div que esta dentro do body (esta selecionando somente a section) - so é selecionado o ultimo elemento */
+    /* para selecionar mais de um elemento tem que usar a virgula ex: body, div, section, p */
+    color: darkblue;
+}
+
+
+
+
+/* EXE2 */
+.heading {
+    color: blueviolet;
+}
+
+/* div.main-content h2.heading  a main content que tem um descendente que é o h2 com a classe heading */
+.main-content h2,
+h3,
+h4 {
+    /* ou .main-content .heading */
+    font-style: italic;
+}
+
+.pai {
+    background-color: aqua;
+}
+
+/* div {
+    color: inherit;
+}  faz com que seja herdado as propriedades 
+   div {
+    color: initial para tirar essa configuração herdar 
+*/
