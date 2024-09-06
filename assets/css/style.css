@@ -227,8 +227,33 @@ p::selection {
     /* overflow: scroll;  para criar uma barra de rolagem */
     overflow-y: auto;
     /* a barra de rolagem so vai aparecer se o conteudo ultrapassar o espaço */
-    margin: 0 auto; /* para centralizar a div ao meio */
-    box-sizing: border-box; /* soma as larguras na classe - pode ser confuso */
+    margin: 0 auto;
+    /* para centralizar a div ao meio */
+    box-sizing: border-box;
+    /* soma as larguras na classe - pode ser confuso */
     /* a diferença entre padding e margin - o padding enche o elemento e o backound vai junto com ele e o margin enpurra o elemento para longe de outro elemento */
 }
 
+/* DISPLAY E FLOAT */
+
+.grid,
+.col {
+    /* block = blocos 
+       inline = linha
+       float = é um elemento ocupa somente o espaço dele  e libera o espaço restante para outros elementos 
+    */
+    /* display: inline-block; */
+    /* mesclagem da inline com a block */
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    margin: 20px;
+    float: left;
+    padding: 15px;
+}
+
+/* em - se baseia no elemento pai 
+html {
+ scroll-behavior = smooth; navega a tela ate o id escolhido
+}
+*/
