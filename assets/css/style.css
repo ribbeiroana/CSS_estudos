@@ -122,7 +122,7 @@ input:disabled {
 /* input:checked { */
 /* mudar o estado do ckeckbox quando ele estiver selecionado */
 /* width: 50px;
-    height: 50px;
+   height: 50px;
 }
 
 input:checked+p {
@@ -150,24 +150,85 @@ input:required {
 
 p:not(.meio) {
     /* exclui a classe selecionada */
-    color: aqua;
+    /* color: aqua; */
 }
 
 
 ul li:nth-child(even) {
     /* even para selecionar todos os pares - odd para selecionar os impares*/
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 ul li:nth-child(odd) {
     /* even para selecionar todos os pares - odd para selecionar os impares*/
-    background-color: rgb(104, 128, 128);
+    /* background-color: rgb(104, 128, 128); */
 }
 
-ul li:nth-child(3n) { /* de 3 em 3 muda para outra cor */
-background-color: aquamarine;
+ul li:nth-child(3n) {
+    /* de 3 em 3 muda para outra cor */
+    /* background-color: aquamarine; */
 }
 
-ul li:nth-child(3n + 5) { /* começando do 5 elemento eu vou mudar a cor de 3 em 3 */
-    background-color: rgb(111, 209, 127);
+ul li:nth-child(3n + 5) {
+    /* começando do 5 elemento eu vou mudar a cor de 3 em 3 */
+    /* background-color: rgb(111, 209, 127); */
 }
+
+ul li::after {
+    /* adicionar algo depois */
+    /* content: ' - '; pseudo-elemento que será adicionado */
+    /* background-color: aqua;
+  color: #fff;
+  display: block; */
+}
+
+ul li::before {
+    /* adicionar algo antes */
+    content: ' - ';
+    /* pseudo-elemento que será adicionado */
+    background-color: aqua;
+    color: #fff;
+    display: block;
+}
+
+p::first-letter {
+    /* Seleciona a primeira letra */
+    /* font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0; */
+}
+
+p::first-line {
+    /* a primeira linha */
+    /* background-color: aqua; */
+}
+
+p::selection {
+    /* o que for selecionado com o mouse terá essa configuração */
+    /* background-color: black; */
+    /* color: #fff; */
+}
+
+::placeholder {
+    /* manipular o placeholder - selecionando so o placeholder ou pegando a classe e selecionando o placeholder daquela classe*/
+    /* color: aqua; */
+}
+
+.texto {
+    display: block;
+    /* inline não pega as propriedades do box model - o display block não precisa colocar pq já é padrão do box model */
+    background-color: aqua;
+    width: 200px;
+    /* uidif */
+    height: 200px;
+    /* raite */
+    /* overflow: hidden; para que o conteudo não passe para fora do box */
+    /* overflow: scroll;  para criar uma barra de rolagem */
+    overflow-y: auto;
+    /* a barra de rolagem so vai aparecer se o conteudo ultrapassar o espaço */
+    margin: 0 auto; /* para centralizar a div ao meio */
+    box-sizing: border-box; /* soma as larguras na classe - pode ser confuso */
+    /* a diferença entre padding e margin - o padding enche o elemento e o backound vai junto com ele e o margin enpurra o elemento para longe de outro elemento */
+}
+
