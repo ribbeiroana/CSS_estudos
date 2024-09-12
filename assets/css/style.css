@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
 }
 
 /* Duas formas de fazer, de acordo com a herança ou selecionando a tag - mas tem que observar como esta estruturado o HTML*/
@@ -84,7 +83,7 @@ h4 {
 /* para fazer alguma transição */
 /* .heading {
     transition: all 300ms ease-in-out; */
-    /* all para selecionar todos - depois vc digita quanto tempo deseja - e por ultimo como quer que a transição ocorra */
+/* all para selecionar todos - depois vc digita quanto tempo deseja - e por ultimo como quer que a transição ocorra */
 /* }
 
 .heading:hover {
@@ -184,11 +183,11 @@ ul li::after {
 
 ul li::before {
     /* adicionar algo antes */
-    content: ' - ';
+    /* content: ' - '; */
     /* pseudo-elemento que será adicionado */
-    background-color: aqua;
-    color: #fff;
-    display: block;
+    /* background-color: aqua; */
+    /* color: #fff; */
+    /* display: block; */
 }
 
 p::first-letter {
@@ -242,14 +241,15 @@ p::selection {
        inline = linha
        float = é um elemento ocupa somente o espaço dele  e libera o espaço restante para outros elementos 
     */
-    /* display: inline-block; */
+    display: grid;
     /* mesclagem da inline com a block */
-    /* width: 300px;
+    width: 300px;
     height: 300px;
     background-color: aqua;
     margin: 20px;
+    padding: 15px;
     float: left;
-    padding: 15px; */
+
 }
 
 /* em - se baseia no elemento pai 
@@ -260,9 +260,8 @@ html {
 
 
 /* <!-- POSICIONAMENTO --> */
-.pai {
+.pai {}
 
-}
 /*
 .filha1 , .filha2, .filha3 {
     width: 300px;
@@ -273,9 +272,8 @@ html {
 }
  */
 
-.filha3 {
+.filha3 {}
 
-}
 /*
 .filha2 {
     position: absolute;
@@ -285,35 +283,49 @@ html {
 */
 .filha1 {
     /* position: relative; com o position relative vc consegue usar as propriedades top/left ... */
-   /* position: absolute;  ele ignora qualquer outro elemento, exe: se vc quiser centralizar um elemento, ele vai colocar o elemento no meio mesmo se tiver outro no centro, ele fica 'por cima'.*/
-     /* essas 4 configurações para o elemento ficar sempre no meio / a margin -px é a metade dos px, pois ele todo é 300px e sem as margens ele não fica centralizado*/ 
+    /* position: absolute;  ele ignora qualquer outro elemento, exe: se vc quiser centralizar um elemento, ele vai colocar o elemento no meio mesmo se tiver outro no centro, ele fica 'por cima'.*/
+    /* essas 4 configurações para o elemento ficar sempre no meio / a margin -px é a metade dos px, pois ele todo é 300px e sem as margens ele não fica centralizado*/
     /* top: 50%;
     margin-top: -150px;
     left: 50%;
     margin-left: -150px;
     z-index: 2;  */
-    /* z-index: -1; o -1 coloca os elementos para tras dos outros elementos - como se fosse um plano de fundo */ 
+    /* z-index: -1; o -1 coloca os elementos para tras dos outros elementos - como se fosse um plano de fundo */
     /* ela vai ficar por cima pois é uma camada acima do z-index:1 da filha 1 */
 }
 
-.filha1 , .filha2, .filha3 {
+/* .filha1,
+.filha2,
+.filha3 {
     width: 300px;
     height: 300px;
     background-color: yellow;
     margin: 10px;
-    position: static;  
+    position: static;
 }
 
-.filha1 {
-
-}
+.filha1 {}
 
 .filha2 {
-
-
+    background-color: aqua;
 }
 
 .filha3 {
+    background-color: blue;
+    position: relative;
+    top: 100px;
+} */
 
+/* OUTRPO EXE DO POSICIONAMENTO */
+/* ul {
+    height: 200px;
+    overflow-y: scroll;
+    background-color: aqua;
+} */
+/*
+ul li.sticky {
+    position: sticky;  ele vai manter o elemento da classe fixo ate encontrar outro elemento com a mesma classe 
+    background-color: gray;
+    top: 0;
 }
-
+/*
