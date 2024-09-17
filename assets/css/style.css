@@ -241,14 +241,14 @@ p::selection {
        inline = linha
        float = é um elemento ocupa somente o espaço dele  e libera o espaço restante para outros elementos 
     */
-    display: grid;
+    /* display: grid; */
     /* mesclagem da inline com a block */
-    width: 300px;
+    /* width: 300px;
     height: 300px;
     background-color: aqua;
     margin: 20px;
     padding: 15px;
-    float: left;
+    float: left; */
 
 }
 
@@ -321,11 +321,20 @@ html {
     height: 200px;
     overflow-y: scroll;
     background-color: aqua;
-} */
-/*
+} 
 ul li.sticky {
     position: sticky;  ele vai manter o elemento da classe fixo ate encontrar outro elemento com a mesma classe 
     background-color: gray;
     top: 0;
-}
-/*
+}*/
+
+/* box-shadow: 0 0 0 0 
+O primeiro - espalhar para a direita
+O segundo - espalhar para a esquerda 
+O terceiro é o blur - o gold
+O ultimo - a opacidade 
+
+/* box-shadow: inset 0 0 0 0 
+Pode usar o inset para colocar a sombra dentro de elemento
+
+*/
